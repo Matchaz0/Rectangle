@@ -15,8 +15,6 @@ public class Rectangle {
         this.height = height;
         this.topLeftX = topLeftX;
         this.topLeftY = topLeftY;
-
-
     }
 
     public int getTopLeftX() {
