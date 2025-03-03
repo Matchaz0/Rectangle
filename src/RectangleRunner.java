@@ -8,6 +8,7 @@ public class RectangleRunner {
         int width;
         Rectangle rect;
         Rectangle target = new Rectangle(10, 15, 20, 10);
+        int count = 0;
 
         for (int k = 0; k < 1000000; k ++) {
             x = (int) (Math.random() * 51);
@@ -17,7 +18,12 @@ public class RectangleRunner {
             rect = new Rectangle(x, y, width, height);
             rectangles.add(rect);
         }
-        Rectangle one = rectangles.get(0);
-        Rectangles two = rectangles.get(1);
+        for (int k = 0; k < rectangles.size(); k ++) {
+            if (target.checkOverlap(rectangles.get(k))) {
+                count++;
+            }
+        }
+        double percentage = (double) count / rectangles.size();
+        System.out.println(percentage);
     }
 }
