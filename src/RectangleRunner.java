@@ -7,12 +7,13 @@ public class RectangleRunner {
         int height;
         int width;
         Rectangle rect;
+        Rectangle target = new Rectangle(10, 15, 20, 10);
 
         for (int k = 0; k < 1000000; k ++) {
-            x = (int) (Math.random() * 50);
-            y = (int) (Math.random() * 50);
-            height = (int) (Math.random() * 40) + 10;
-            width = (int) (Math.random() * 5) + 5 ;
+            x = (int) (Math.random() * 51);
+            y = (int) (Math.random() * 51);
+            height = (int) (Math.random() * 41) + 10;
+            width = (int) (Math.random() * 6) + 5 ;
             rect = new Rectangle(x, y, width, height);
             rectangles.add(rect);
         }
