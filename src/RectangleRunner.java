@@ -16,6 +16,7 @@ public class RectangleRunner {
             rect = new Rectangle(x, y, width, height);
             rectangles.add(rect);
         }
-        System.out.println(rectangles.get(0));
+        Rectangle one = rectangles.get(0);
+        Rectangles two = rectangles.get(1);
     }
 }

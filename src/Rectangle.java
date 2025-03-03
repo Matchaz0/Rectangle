@@ -52,8 +52,48 @@ public class Rectangle {
         return width * height;
     }
 
-    public boolean checkOverlap(Rectangle otherRect) {
-        return true;
+    public int[] getxRange() {
+        return xRange;
+    }
+
+    public int[] getyRange() {
+        return yRange;
+    }
+
+
+
+    public boolean checkOverlapRangesX(Rectangle otherRect) {
+        int[] otherRectXRange = otherRect.getxRange();
+        if (xRange[0] >= otherRectXRange[0] && xRange[0] <= otherRectXRange[1]) {
+            return true;
+        }
+        if (xRange[1] >= otherRectXRange[0] && xRange[1] <= otherRectXRange[1]) {
+            return true;
+        }
+        if (xRange[0] <= otherRectXRange[0] && xRange[0] >= otherRectXRange[1]) {
+            return true;
+        }
+        if (xRange[1] <= otherRectXRange[0] && xRange[1] >= otherRectXRange[1]) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkOverlapRangesY(Rectangle otherRect) {
+        int[] otherRectYRange = otherRect.getyRange();
+        if (yRange[0] >= otherRectYRange[0] && yRange[0] <= otherRectYRange[1]) {
+            return true;
+        }
+        if (yRange[1] >= otherRectYRange[0] && yRange[1] <= otherRectYRange[1]) {
+            return true;
+        }
+        if (yRange[0] <= otherRectYRange[0] && yRange[0] >= otherRectYRange[1]) {
+            return true;
+        }
+        if (yRange[1] <= otherRectYRange[0] && yRange[1] >= otherRectYRange[1]) {
+            return true;
+        }
+        return false;
     }
 
     public String toString() {
