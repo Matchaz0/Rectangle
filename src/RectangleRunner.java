@@ -16,5 +16,6 @@ public class RectangleRunner {
             rect = new Rectangle(x, y, width, height);
             rectangles.add(rect);
         }
+        System.out.println(rectangles.get(0));
     }
 }

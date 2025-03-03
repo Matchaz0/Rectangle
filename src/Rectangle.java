@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class Rectangle {
     private int topLeftX;
     private int topLeftY;
-    private int topRightX;
-    private int topRightY;
-    private int botLeftX;
-    private int botLeftY;
-    private int botRightX;
-    private int botRightY;
+//    private int topRightX;
+//    private int topRightY;
+//    private int botLeftX;
+//    private int botLeftY;
+//    private int botRightX;
+//    private int botRightY;
     private int width;
     private int height;
     private int[] xRange;
@@ -21,15 +21,15 @@ public class Rectangle {
         this.height = height;
         this.topLeftX = topLeftX;
         this.topLeftY = topLeftY;
-        topRightX = topLeftX + width;
-        topRightY = topLeftY;
-        botLeftX = topLeftX;
-        botLeftY = topLeftY - height;
-        botRightX = topLeftX + width;
-        botRightY = topLeftY - width;
+//        topRightX = topLeftX + width;
+//        topRightY = topLeftY;
+//        botLeftX = topLeftX;
+//        botLeftY = topLeftY - height;
+//        botRightX = topLeftX + width;
+//        botRightY = topLeftY - width;
 
-        xRange = (topLeftX, topRightX);
-        yRange = (botLeftY, topLeftY);
+        xRange = new int[] {topLeftX, topLeftX + width};
+        yRange = new int[] {topLeftY - height, topLeftY};
 
     }
 
@@ -60,12 +60,12 @@ public class Rectangle {
         return "Rectangle{" +
                 "topLeftX=" + topLeftX +
                 ", topLeftY=" + topLeftY +
-                ", topRightX=" + topRightX +
-                ", topRightY=" + topRightY +
-                ", botLeftX=" + botLeftX +
-                ", botLeftY=" + botLeftY +
-                ", botRightX=" + botRightX +
-                ", botRightY=" + botRightY +
+//                ", topRightX=" + topRightX +
+//                ", topRightY=" + topRightY +
+//                ", botLeftX=" + botLeftX +
+//                ", botLeftY=" + botLeftY +
+//                ", botRightX=" + botRightX +
+//                ", botRightY=" + botRightY +
                 ", width=" + width +
                 ", height=" + height +
                 ", xRange=" + Arrays.toString(xRange) +
